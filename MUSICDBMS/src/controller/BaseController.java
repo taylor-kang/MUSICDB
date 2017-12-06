@@ -14,7 +14,7 @@ public class BaseController {
 	
 	protected boolean open() {
 		try {
-			conn = DriverManager.getConnection(DBConstants.URL, DBConstants.USER, DBConstants.PASSWORD);
+			conn = DriverManager.getConnection(DBConstants.getUrl(), DBConstants.USER, DBConstants.PASSWORD);
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

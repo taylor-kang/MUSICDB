@@ -36,7 +36,7 @@ public class AdminDashboard {
 
         while(true) {
             Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(DBConstants.URL,DBConstants.USER,DBConstants.PASSWORD                                                                                                                            );
+            conn = DriverManager.getConnection(DBConstants.getUrl(),DBConstants.USER,DBConstants.PASSWORD                                                                                                                            );
             stmt = conn.createStatement();
 
             System.out.println("============================");

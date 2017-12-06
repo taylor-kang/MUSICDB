@@ -22,7 +22,7 @@ public class UserDashboard {
         Statement stmt = null;
 
         Class.forName(JDBC_DRIVER);
-        conn = DriverManager.getConnection(DBConstants.URL,DBConstants.USER,DBConstants.PASSWORD);
+        conn = DriverManager.getConnection(DBConstants.getUrl(),DBConstants.USER,DBConstants.PASSWORD);
         stmt = conn.createStatement();
 
         MusicController musicDB = new MusicController();

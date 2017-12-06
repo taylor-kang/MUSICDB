@@ -5,10 +5,14 @@ import java.sql.*;
 public class DBConstants {
 	public static String DBNAME = "test2";
 	public static String PORTNUM = "3307";
-	public static String URL = "jdbc:mysql://127.0.0.1:" + PORTNUM + "/" + DBNAME;
+	//public static String URL = "jdbc:mysql://127.0.0.1:" + PORTNUM + "/" + DBNAME;
 	public static String USER = "root";
 	public static String PASSWORD = "1234";
-	
+
+	public static String getUrl() {
+		return "jdbc:mysql://127.0.0.1:" + PORTNUM + "/" + DBNAME;
+	}
+
 	public static final class Table {
 		public static final String MUSIC = "MUSIC";
 		public static final String USER = "USER";
