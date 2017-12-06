@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  * Created by kangtaehee on 2017. 11. 28..
- * 2015004284 강태희
+ * 2015004284
  *
  */
 public class MJMain {
@@ -25,6 +25,17 @@ public class MJMain {
         //connection
         Connection conn = null;
         Statement stmt = null;
+        Scanner scn = new Scanner(System.in);
+
+
+        System.out.print("type DB NAME");
+        DBConstants.DBNAME =  scn.nextLine();
+        System.out.print("type PORT Number");
+        DBConstants.PORTNUM =  scn.nextLine();
+        System.out.print("type USER ID");
+        DBConstants.USER =  scn.nextLine();
+        System.out.print("type USER PW");
+        DBConstants.PASSWORD =  scn.nextLine();
 
         Class.forName(JDBC_DRIVER);
 
@@ -34,18 +45,10 @@ public class MJMain {
 
         UserController userDB = new UserController();
         PlaylistController plistDB = new PlaylistController();
-        Scanner scn = new Scanner(System.in);
 
         try{
 
-            System.out.print("type DB NAME");
-            DBConstants.DBNAME =  scn.nextLine();
-            System.out.print("type PORT Number");
-            DBConstants.PORTNUM =  scn.nextLine();
-            System.out.print("type USER ID");
-            DBConstants.USER =  scn.nextLine();
-            System.out.print("type USER PW");
-            DBConstants.PASSWORD =  scn.nextLine();
+
 
 
             //First Page

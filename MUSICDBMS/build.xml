@@ -1,0 +1,25 @@
+<project name="MUSICDBMS" basedir="." default="build-jar">
+    <description>MUSICDBMS</description>
+    <property name="dist.src" location="src"/>
+    <property name="dist.classes" location="classes"/>
+    <property name="dist.lib" location="lib"/>
+    <property name="dist.jar" location="MUSICDBMS.jar"/>
+
+    <target name="compile">
+        <mkdir dir="${dist.classes}"/>
+        <javac srcdir="${dist.src}" destdir="${dist.classes}">
+            <classpath>
+                <pathelement path="${dist.lib}/mysql-connector-java-5.1.44-bin.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build-jar" depends="compile">
+        <jar destfile="${dist.jar}" basedir="${dist.classes}">
+            <zipgroupfileset dir="${dist.lib}" includes="mysql-connector-java-5.1.44-bin.jar" />
+            <manifest>
+                <attribute name="Main-Class" value="MJMain"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
