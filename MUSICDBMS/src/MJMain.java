@@ -62,7 +62,7 @@ public class MJMain {
                 System.out.println("     M U S I C J A V A      ");
                 System.out.println("----------------------------");
                 System.out.println();
-                System.out.println("1. model.User Log-IN");
+                System.out.println("1. Log-IN");
                 System.out.println("2. Find PASSWORD");
                 System.out.println("3. Admin Log-IN");
                 System.out.println("4. New Account");
@@ -77,7 +77,7 @@ public class MJMain {
                     //1. model.User Log-IN
                     case 1:
                         System.out.println("============================");
-                        System.out.println("        model.User Log-IN         ");
+                        System.out.println("            Log-IN          ");
                         System.out.println("----------------------------");
                         System.out.println();
 

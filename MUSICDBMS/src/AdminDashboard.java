@@ -43,8 +43,8 @@ public class AdminDashboard {
             System.out.println("         Admin Page         ");
             System.out.println("----------------------------");
             System.out.println();
-            System.out.println("1. Insert/ Update / Delete / Select model.Music List");
-            System.out.println("2. Insert/ Update / Delete / Select model.User List");
+            System.out.println("1. Insert/ Update / Delete / Select Music List");
+            System.out.println("2. Insert/ Update / Delete / Select User List");
             System.out.println("3. Log-out");
             System.out.println();
             System.out.println("----------------------------");
@@ -112,7 +112,7 @@ public class AdminDashboard {
 
 
                             System.out.println("----------------------------");
-                            System.out.println("=>Insert model.Music Successfully!");
+                            System.out.println("=>Insert Music Successfully!");
 
                             stmt.close();
                             conn.close();
@@ -123,10 +123,10 @@ public class AdminDashboard {
                             scn.nextLine();
                             System.out.println();
                             //MUSIC NAME
-                            System.out.print("type model.Music Name: ");
+                            System.out.print("type Music Name: ");
                             inputName = scn.nextLine();
 
-                            System.out.print("type model.Artist Name: ");
+                            System.out.print("type Artist Name: ");
                             inputArtist = scn.nextLine();
                             System.out.println();
                             System.out.println("----------------------------");
@@ -144,7 +144,7 @@ public class AdminDashboard {
                                 System.out.println();
                                 System.out.println("----------------------------");
                                 musicDB.update(music,inputAttr,inputValue);
-                                System.out.println("=>Update model.Music Successfully!");
+                                System.out.println("=>Update Music Successfully!");
                             }
 
                             break;

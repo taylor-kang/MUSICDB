@@ -84,6 +84,7 @@ public class DBConstants {
 						+ Column.MUSIC_ARTIST + " varchar(32) not null, "
 						+ Column.MUSIC_TRACK + " int(11) not null, "
 						+ Column.MUSIC_LIKENUM + " int(11) not null )";
+
 		public static final String CREATE_TABLE_ALBUM =
 				"create table " + Table.ALBUM + " ( "
 						+ Column.ALBUM_NUM + " int(11) primary key auto_increment, "
